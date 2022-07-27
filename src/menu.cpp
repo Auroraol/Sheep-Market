@@ -50,13 +50,37 @@ int mainMenu(std::string type)
     else
         dark_blue_print("\t\t    Menu\n");
     black_print(menuType[type]);
+    interaction();
     return 0;
 }
 
+// TODO
 void interaction()
 {
+    using std::cin;
     using std::cout;
     using std::endl;
 
+    char ch;
     cout << "Please choose opration: ";
+    cin >> ch;
+    while (ch != '4')
+    {
+        while (cin.get() != '\n')
+            continue;
+        switch (ch)
+        {
+        case '1':
+            cout << "1";
+            break;
+        case '2':
+            cout << "2";
+            break;
+        case '3':
+            cout << "3";
+            break;
+        }
+        cout << "Please choose opration: ";
+        cin >> ch;
+    }
 }
