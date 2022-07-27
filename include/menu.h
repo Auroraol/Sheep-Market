@@ -4,6 +4,7 @@
 #include <map>
 #include <string>
 
-int mainMenu(std::string type);
+int mainMenu(std::string type = "MAIN");
+void interaction();
 
 #endif
